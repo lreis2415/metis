@@ -428,7 +428,7 @@ void WritePartition(char *fname, idx_t *part, idx_t n, idx_t nparts)
   idx_t i;
   char filename[MAXLINE];
 
-  sprintf(filename, "%s.part.%"PRIDX, fname, nparts);
+  snprintf(filename, sizeof(filename), "%s.part.%"PRIDX, fname, nparts);
 
   fpout = gk_fopen(filename, "w", __func__);
 
@@ -447,9 +447,9 @@ void WriteMeshPartition(char *fname, idx_t nparts, idx_t ne, idx_t *epart,
 {
   FILE *fpout;
   idx_t i;
-  char filename[256];
+  char filename[MAXLINE];
 
-  sprintf(filename,"%s.epart.%"PRIDX,fname, nparts);
+  snprintf(filename,sizeof(filename),"%s.epart.%"PRIDX,fname, nparts);
 
   fpout = gk_fopen(filename, "w", __func__);
 
@@ -459,7 +459,7 @@ void WriteMeshPartition(char *fname, idx_t nparts, idx_t ne, idx_t *epart,
   gk_fclose(fpout);
 
 
-  sprintf(filename,"%s.npart.%"PRIDX,fname, nparts);
+  snprintf(filename,sizeof(filename),"%s.npart.%"PRIDX,fname, nparts);
 
   fpout = gk_fopen(filename, "w", __func__);
 
@@ -480,7 +480,7 @@ void WritePermutation(char *fname, idx_t *iperm, idx_t n)
   idx_t i;
   char filename[MAXLINE];
 
-  sprintf(filename, "%s.iperm", fname);
+  snprintf(filename, sizeof(filename), "%s.iperm", fname);
 
   fpout = gk_fopen(filename, "w", __func__);
 

@@ -16,7 +16,7 @@
 #define _LIBMETIS_DEFS_H_
 
 #define METISTITLE              "METIS 5.0 Copyright 1998-13, Regents of the University of Minnesota\n"
-#define MAXLINE			1280000
+#define MAXLINE			256
 
 #define LTERM			(void **) 0	/* List terminator for gk_free() */
 
@@ -56,5 +56,9 @@
 #define MCPMETIS_DEFAULT_UFACTOR        10
 #define KMETIS_DEFAULT_UFACTOR          30
 #define OMETIS_DEFAULT_UFACTOR          200
+
+#if _MSC_VER
+#define snprintf _snprintf
+#endif
 
 #endif
