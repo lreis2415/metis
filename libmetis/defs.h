@@ -8,6 +8,8 @@
  * Started 8/27/94
  * George
  *
+ * Modified by Philipp Kutin
+ *
  * $Id: defs.h 13933 2013-03-29 22:20:46Z karypis $
  *
  */

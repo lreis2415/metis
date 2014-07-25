@@ -8,6 +8,8 @@
  * Started 8/28/94
  * George
  *
+ * Modified by Philipp Kutin
+ *
  * $Id: io.c 11932 2012-05-10 18:18:23Z dominique $
  *
  */
